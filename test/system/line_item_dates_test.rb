@@ -17,7 +17,7 @@ class LineItemDatesTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'First Quote'
     fill_in 'Date', with: Date.current + 1.day
 
-    click_on 'Create Line item date'
+    click_on 'Create date'
     assert_text I18n.l(Date.current + 1.day, format: :long)
   end
 
@@ -25,13 +25,13 @@ class LineItemDatesTest < ApplicationSystemTestCase
     assert_selector 'h1', text: 'First Quote'
 
     within id: dom_id(@line_item_date) do
-      click_on 'Edit'
+      click_on 'Edit Date'
     end
 
     assert_selector 'h1', text: 'First Quote'
 
     fill_in 'Date', with: Date.current + 1.day
-    click_on 'Update Line item date'
+    click_on 'Update date'
 
     assert_text I18n.l(Date.current + 1.day, format: :long)
   end
@@ -41,7 +41,7 @@ class LineItemDatesTest < ApplicationSystemTestCase
 
     accept_confirm do
       within id: dom_id(@line_item_date) do
-        click_on 'Delete'
+        click_on 'Delete Date'
       end
     end
 

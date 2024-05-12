@@ -6,13 +6,13 @@
       </h2>
 
       <div class="line-item-date__actions">
-        <%= button_to "Delete",
+        <%= button_to "Delete Date",
                       quote_line_item_date_path(quote, line_item_date),
                       method: :delete,
                       form: { data: { turbo_confirm: "Are you sure?" } },
                       class: 'btn btn--primary' %>
         
-        <%= link_to "Edit",
+        <%= link_to "Edit Date",
                     [:edit, quote, line_item_date],
                     class: 'btn btn--light' %>
       </div>

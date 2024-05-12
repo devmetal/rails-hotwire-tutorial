@@ -10,6 +10,7 @@ class QuotesTest < ApplicationSystemTestCase
   # end
 
   setup do
+    login_as users(:accountant)
     @quote = Quote.ordered.first # reference to the first fixture
   end
 

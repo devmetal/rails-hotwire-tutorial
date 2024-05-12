@@ -2,8 +2,8 @@
 
 one:
   quote: first
-  date: 2024-05-12
+  date: <%= Date.current %>
 
 two:
   quote: first
-  date: 2024-05-13
+  date: <%= Date.current + 1.week %>

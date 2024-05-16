@@ -2,6 +2,16 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   devise_for :users
+
+  devise_for :api_users, path: 'api', path_names: {
+                                        sign_in: 'login',
+                                        sign_out: 'logout',
+                                        registration: 'signup'
+                                      },
+                         controllers: {
+                           sessions: 'api_users/sessions',
+                           registrations: 'api_users/registrations'
+                         }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -11,7 +21,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     jsonapi_resources :quotes
   end
 

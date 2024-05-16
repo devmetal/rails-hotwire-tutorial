@@ -36,6 +36,10 @@ gem 'redis', '>= 4.0.1'
 
 gem 'devise', '~> 4.8.1'
 
+gem 'devise-jwt'
+
+gem 'rack-cors'
+
 gem 'jsonapi-resources'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]

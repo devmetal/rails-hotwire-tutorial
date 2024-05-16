@@ -3,7 +3,11 @@
 one:
   jti: MyString
   exp: 2024-05-13 15:43:32
+  created_at: <%= Date.current %>
+  updated_at: <%= Date.current %>
 
 two:
   jti: MyString
   exp: 2024-05-13 15:43:32
+  created_at: <%= Date.current %>
+  updated_at: <%= Date.current %>
